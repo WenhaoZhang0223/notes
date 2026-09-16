@@ -28,3 +28,4 @@ class Student(BaseModel):
 async def student_data(college:str, age:int, student:Student):
    retval={"college":college, "age":age, **student.model_dump()}
    return retval
+
