@@ -23,4 +23,6 @@ templates = Jinja2Templates(directory="templates") # 指定模板目录
 
 @app.get("/hello/", response_class=HTMLResponse)
 async def hello(request: Request):
-   return templates.TemplateResponse("hello.html", {"request": request})
+   return templates.TemplateResponse(
+      request=request,
+      name = "hello.html")
