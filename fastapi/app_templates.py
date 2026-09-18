@@ -25,4 +25,5 @@ templates = Jinja2Templates(directory="templates") # 指定模板目录
 async def hello(request: Request):
    return templates.TemplateResponse(
       request=request,
-      name = "hello.html")
+      name = "hello.html",
+      context = {"username": "wenhao"})
